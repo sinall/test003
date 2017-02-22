@@ -108,8 +108,8 @@ Mac/Linux
 - 将 shipane\_sdk/joinquant/executor.py 拷贝粘贴到 shipane\_sdk.py 末尾。
 - 修改策略代码，可参考如下示例：
 
-    * examples/joinquant/simple\_strategy.py - 基本用法
-    * examples/joinquant/new\_stocks\_purchase.py - 新股申购
+  * examples/joinquant/simple\_strategy.py - 基本用法
+  * examples/joinquant/new\_stocks\_purchase.py - 新股申购
 
 二. 抓取方式
 ~~~~~~~~~~~~
@@ -149,8 +149,8 @@ Mac/Linux
 - 将 shipane\_sdk/ricequant/executor.py 拷贝粘贴到 shipane\_sdk.py 末尾。
 - 修改策略代码，可参考如下示例：
 
-    * examples/ricequant/simple\_strategy.py - 基本用法
-    * examples/ricequant/new\_stocks\_purchase.py - 新股申购
+  * examples/ricequant/simple\_strategy.py - 基本用法
+  * examples/ricequant/new\_stocks\_purchase.py - 新股申购
 
 二. 抓取方式
 ~~~~~~~~~~~~
