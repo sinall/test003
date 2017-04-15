@@ -22,7 +22,7 @@ ShiPanE-Python-SDK
 - 聚宽（JoinQuant）集成
 - `米筐（RiceQuant）`_ 集成
 - 优矿（Uqer）集成
-- :ref:`guorn-integration`
+- `果仁（Guorn）集成 <#果仁Guorn集成>`__
 
 基本用法
 --------------
@@ -210,8 +210,6 @@ Mac/Linux
 ^^^^
 
 见 `定时任务调度 <#定时任务调度>`__
-
-.. _guorn-integration:
 
 果仁（Guorn）集成
 ---------------------
