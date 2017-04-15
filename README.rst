@@ -20,15 +20,33 @@ ShiPanE-Python-SDK
 - 简单的实盘易 HTTP API 封装，见 shipane_sdk/client.py
 - 多账号自动新股申购（自动打新）
 - 聚宽（JoinQuant）集成
-- 米筐（RiceQuant）集成
+- `米筐（RiceQuant）`_ 集成
 - 优矿（Uqer）集成
+- :ref:`guorn-integration`
+
+基本用法
+--------------
+
+.. code:: python
+
+  import logging
+
+  import shipane_sdk
+
+  logging.basicConfig(level=logging.DEBUG)
+
+  client = shipane_sdk.Client(host='localhost', port=8888, key='')
+  account_info = client.get_account('title:monijiaoyi')
+  print(account_info)
+
+详见：examples/basic_example.py
 
 定时任务调度
 --------------
 
 - 多账号自动新股申购（自动打新）
 - 聚宽（JoinQuant）自动跟单（抓取方式）
-- 米筐（RiceQuant）自动跟单（抓取方式）
+- `米筐（RiceQuant）`_ 自动跟单（抓取方式）
 - 优矿（Uqer）自动跟单（抓取方式）
 
 Windows
@@ -108,8 +126,8 @@ Mac/Linux
 - 将 shipane\_sdk/joinquant/executor.py 拷贝粘贴到 shipane\_sdk.py 末尾。
 - 修改策略代码，可参考如下示例：
 
-  * examples/joinquant/simple\_strategy.py - 基本用法
-  * examples/joinquant/new\_stocks\_purchase.py - 新股申购
+  - examples/joinquant/simple\_strategy.py - 基本用法
+  - examples/joinquant/new\_stocks\_purchase.py - 新股申购
 
 二. 抓取方式
 ~~~~~~~~~~~~
@@ -149,8 +167,8 @@ Mac/Linux
 - 将 shipane\_sdk/ricequant/executor.py 拷贝粘贴到 shipane\_sdk.py 末尾。
 - 修改策略代码，可参考如下示例：
 
-  * examples/ricequant/simple\_strategy.py - 基本用法
-  * examples/ricequant/new\_stocks\_purchase.py - 新股申购
+  - examples/ricequant/simple\_strategy.py - 基本用法
+  - examples/ricequant/new\_stocks\_purchase.py - 新股申购
 
 二. 抓取方式
 ~~~~~~~~~~~~
@@ -193,6 +211,8 @@ Mac/Linux
 
 见 `定时任务调度 <#定时任务调度>`__
 
+.. _guorn-integration:
+
 果仁（Guorn）集成
 ---------------------
 
@@ -212,20 +232,25 @@ Mac/Linux
 - 部署实盘易。
 - 测试通过。
 
+步骤
+^^^^
+
+见 `定时任务调度 <#定时任务调度>`__
+
 字段要求
 ^^^^^^^^
 
-*资金* 包含以下字段
+**资金** 包含以下字段
 
 1. 可用
 
-*股份* 包含以下字段
+**股份** 包含以下字段
 
 1. 当前价
 
    正则：:code:`(当前|最新|参考市)价`
 
-   示例：当前价、最新价、参考市价
+   示例：当前价、最新价
 
 2. 证券数量
 
@@ -239,14 +264,7 @@ Mac/Linux
 
    示例：可卖数量、可用数量
 
-可通过实盘易 /config/column-report-mappings 进行设置，具体见：
-
-见 `定时任务调度 <#定时任务调度>`__
-
-步骤
-^^^^
-
-见 `定时任务调度 <#定时任务调度>`__
+可通过实盘易进行设置。详见：`实盘易3.6.0.0自定义字段映射使用说明 <http://www.iguuu.com/discuz/thread-7885-1-1.html>`_
 
 其他语言 SDK
 ------------
@@ -259,4 +277,6 @@ C# SDK
 
 .. |实盘易-股票自动交易| image:: http://pub.idqqimg.com/wpa/images/group.png
    :target: http://shang.qq.com/wpa/qunwpa?idkey=1ce867356702f5f7c56d07d5c694e37a3b9a523efce199bb0f6ff30410c6185d%22
+
+.. _米筐（RiceQuant）: http://www.ricequant.com
 
